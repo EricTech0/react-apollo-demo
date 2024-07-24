@@ -18,6 +18,20 @@ function post(parent, args, context) {
     return newLink
 }
 
+function postAnonymous(parent, args, context) {
+    const { url, description } = args;
+    const newLink = context.prisma.link.create({
+        data: {
+            url,
+            description,
+        },
+    })
+
+    context.pubsub.publish("NEW_LINK", newLink)
+
+    return newLink
+}
+
 async function signup(parent, args, context) {
     const password = await bcrypt.hash(args.password, 10)
 
@@ -81,5 +95,6 @@ module.exports = {
     post,
     login,
     signup,
-    vote
+    vote,
+    postAnonymous
 }

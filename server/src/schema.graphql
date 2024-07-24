@@ -16,6 +16,7 @@ enum Sort {
 
 type Mutation {
   post(url: String!, description: String!): Link!
+  postAnonymous(url: String!, description: String!): Link!
   signup(email: String!, password: String!, name: String!): AuthPayload
   login(email: String!, password: String!): AuthPayload
   vote(linkId: ID!): Vote
