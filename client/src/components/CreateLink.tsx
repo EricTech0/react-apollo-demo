@@ -3,11 +3,11 @@ import { useMutation, gql } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
 
 const CREATE_LINK_MUTATION = gql`
-  mutation PostAnonymousMutation(
+  mutation PostMutation(
     $description: String!
     $url: String!
   ) {
-    postAnonymous(description: $description, url: $url) {
+    post(description: $description, url: $url) {
       id
       url
       description
