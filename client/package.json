@@ -11,12 +11,12 @@
     "@types/node": "^16.18.104",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "graphql": "^16.9.0",
+    "graphql": "^15.9.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.2.1",
+    "react-router-dom": "^6.25.1",
     "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
+    "typescript": "^5.5.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

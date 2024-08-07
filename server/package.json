@@ -1,24 +1,19 @@
 {
-  "name": "server",
+  "name": "hackernews-node",
   "version": "1.0.0",
-  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "view-db": "npx prisma studio",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "view-db": "prisma studio --browser none"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "@prisma/client": "^5.17.0",
-    "apollo-server": "^2.26.2",
-    "bcryptjs": "^2.4.3",
-    "graphql": "^14.7.0",
-    "jsonwebtoken": "^9.0.2"
+    "apollo-server": "^2.19.0",
+    "bcryptjs": "2.4.3",
+    "jsonwebtoken": "8.5.1"
   },
   "devDependencies": {
-    "prisma": "^5.17.0"
+    "prisma": "^3.7.0",
+    "nodemon": "^2.0.6"
   }
 }
